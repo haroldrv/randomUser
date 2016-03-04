@@ -1,0 +1,16 @@
+<div class="panel widget">
+    <div class="panel-body success text-center">
+        <div class="clearfix">
+        </div>
+        <img ng-src="{{vm.user.picture.medium}}" alt="Image" class="img-thumbnail img-circle thumb96">
+        <h4 class="mt0">{{vm.user.name.first}} {{vm.user.name.last}}</h4>
+        <p class="m0">
+            <em class="fa fa-fw fa-map-marker"></em>{{vm.user.location.street}}, {{vm.user.location.city}}, {{vm.user.location.state}}</p>
+        <div class="clearfix">
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-success" ng-click="vm.getRandomUser()" ng-disabled="vm.inProgress">Generate User!</button>    
+</div>
