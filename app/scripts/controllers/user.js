@@ -30,13 +30,17 @@
             var url = 'https://randomuser.me/api/';
             vm.inProgress = true;
             apiService.getRandomUser(url)
-                .then(bindResult)
-                .catch(logError);
+                .then(function(response){
+                    bindResult(response);
+                })
+                .catch(function(err){
+                    logError(err);
+                });
         }
         
         function bindResult(response){
             vm.inProgress = false;
-            vm.user = response.data.result[0].user;
+            vm.user = response.data.results[0].user;
         }
         
         function logError(error){

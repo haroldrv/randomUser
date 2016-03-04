@@ -1,8 +1,7 @@
 'use strict';
 
-var miServicio = angular.module('mytodoApp');
-
-miServicio.service('apiService', apiService);
+angular.module('mytodoApp')
+    .service('apiService', apiService);
 
 apiService.$inject = ['$http'];
 
